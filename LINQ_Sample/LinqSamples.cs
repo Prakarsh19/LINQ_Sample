@@ -10,7 +10,6 @@ namespace Task
     public class LinqSamples
     {
         private readonly DataSource _dataSource = new DataSource();
-
         public void Linq1()
         {
             MessageHelper.InfoMessage("Linq1. Enter the amount to X");
@@ -39,7 +38,6 @@ namespace Task
                              from s in _dataSource.Suppliers
                              where c.City == s.City && s.Country == s.Country
                              select new { CustomerName = c.CustomerName, SupplierName = s.SupplierName };
-
             foreach (var c in Customer_Supplier)
             {
                 Console.WriteLine(c);
@@ -61,8 +59,6 @@ namespace Task
                 Console.WriteLine(c.CustomerName);
             }
         }
-        
-
         public void Linq4()
         {
             MessageHelper.InfoMessage("Linq4. Customer became clients");
@@ -79,7 +75,6 @@ namespace Task
                 Console.WriteLine(c);
             }
         }
-
         public void Linq5()
         {
             MessageHelper.InfoMessage("Linq5. Customer became clients");
@@ -100,7 +95,7 @@ namespace Task
                 Console.WriteLine(entity);
             }
         }
-        
+
         public void Linq6()
         {
             MessageHelper.InfoMessage("Linq6. Customers having Postal code is non-numeric or the Region is empty or the phone does not have a operator code");
